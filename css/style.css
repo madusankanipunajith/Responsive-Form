@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: #fa7a4f;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    position: absolute;
+    top: 1%;
+    padding-bottom: 50px;
+}
+.head{
+    width: 100%;
+    margin-bottom: 60px;
+}
+.head h2{
+    text-align: center;
+    font-size: 4rem;
+}
+.logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 110px;
+    border: 2px solid #121212;
+    border-radius: 50%;
+}
+.card{
+    width: 435px;
+    height: 440px;
+    margin: 0 auto;
+    background: #121212;
+    border: 9px solid #ff3e00;
+    border-radius: 30%;
+    overflow: hidden;
+}
+.card .tabs{
+    width: 100%;
+}
+.card .tabs .btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    overflow: hidden;
+    padding: 25px 50px;
+}
+.card .tabs .btns > *{
+    flex: 1;
+    text-align: center;
+    line-height: 70px;
+}
+.card .tabs .btns a, .card .tabs .btns label{
+    text-decoration: none;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+}
+.card .tabs .btns .si a label{
+    color: #ff3e00;
+}
+.card .tabs .btns .si .highlight_si, .card .tabs .btns .su .highlight_su{
+    position: relative;
+    color: #ff3e00;
+    font-weight: 700;
+    transition: all 0.4s ease-in;
+}
+.card .tabs .btns .si .highlight_si::before, 
+.card .tabs .btns .su .highlight_su::before{
+    content: '';
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    background: #ff3e00;
+    border-radius: 99px 99px 0 0;
+    bottom: 0;
+    left: 0;
+}
+.card .tabs .btns .su .highlight_su{
+    opacity: 0;
+    visibility: hidden;
+}
+#tog_1, #tog_2{
+    display: none;
+}
+
+/*Toggle undelines*/
+#tog_2:checked ~ .tabs > .btns > .si > .highlight_si {
+    opacity: 0;
+    visibility: hidden;
+}
+#tog_2:checked ~ .tabs > .btns > .su > .highlight_su {
+    opacity: 1;
+    visibility: visible;
+}
+#tog_2:checked ~ .tabs > .btns > .su > a > label{
+    color: #ff3e00;
+}
+#tog_2:checked ~ .tabs > .btns > .si > a > label{
+    color: #fff;
+}
+
+.card .tabs .line{
+    width: 100%;
+    background: #707070;
+    height: 1px;
+}
+
+/*Form section*/
+.card .frms form{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    transition: all 0.3s ease-in;
+}
+.card .frms form .ui{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.card .frms form .ui input{
+    width: 280px;
+    height: 50px;
+    border-radius: 50px;
+    padding-left: 50px;
+    font-size: 1.1rem;
+    border: none;
+    background: #1c1c1c;
+    color: #fff;
+}
+.card .frms form i{
+    position: absolute;
+    left: 50px;
+    color: #fff;
+}
+
+/*Buttons*/
+.card .frms form .fbtns{
+    margin-top: 20px;
+    text-decoration: none;
+    background: #ff3e00;
+    padding: 14px 52px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+.card .frms form .fbtns:hover{
+    background: #fa7a4f;
+    color: #1c1c1c;
+}
+
+/*Rememeber me*/
+.card .frms .sifrm .remember{
+    width: 70%;
+    margin: 10px auto 10px 0;
+    cursor: pointer;
+    position: relative;
+    left: 30px;
+} 
+.card .frms .sifrm .remember input{
+    opacity: 0;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    position: absolute;
+}
+.card .frms .sifrm .remember span{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #979797;
+}
+.card .frms .sifrm .remember span::before{
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: #1c1c1c;
+    margin-right: 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in;
+}
+.card .frms .sifrm .remember:hover input + span::before{
+    background: #383838;
+} 
+.card .frms .sifrm .remember input:checked + span::before{
+    background-image: url('../img/check.png');
+    background-size: cover;
+}
+
+/*Forgot password*/
+.card .frms .sifrm .forgot{
+    margin-top: 10px;
+}
+.card .frms .sifrm .forgot a{
+    text-decoration: none;
+    color: #979797;
+}

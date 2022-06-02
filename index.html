@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Responsive Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>SLT BROADBAND</h2>
+        </div>
+
+        <!--Logo-->
+        <div class="logo">
+            <img src="./img/avatar.png" alt="user_icon">
+        </div>
+        
+        <!--Card-->
+        <div class="card">
+            <input type="radio" id="tog_1" name="select">
+            <input type="radio" id="tog_2" name="select">
+
+            <!--Tabs-->
+            <div class="tabs">
+                <!--Buttons-->
+                <div class="btns">
+                    <div class="si">
+                        <a href="#" class="signin"><label for="tog_1">Sing In</label></a>
+                        <div class="highlight_si"></div>
+                    </div>
+                    <div class="su">
+                        <a href="#" class="signup"><label for="tog_2">Sign Up</label></a>
+                        <div class="highlight_su"></div>
+                    </div>
+                </div>
+                <!--Line-->
+                <div class="line"></div>
+            </div>
+
+            <!--Form Section-->
+            <div class="frms">
+                <!--Sign In form-->
+                <form action="" class="sifrm">
+                    <div class="ui">
+                        <input type="text" placeholder="Enter your username">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="ui">
+                        <input type="password" placeholder="Enter your password">
+                        <i class="fa fa-lock"></i>
+                    </div>
+                    <label class="remember">
+                        <input type="checkbox">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="fbtns">Sign In</a>
+                    <label class="forgot">
+                        <a href="#">Forgot Password ?</a>
+                    </label>
+                </form>
+
+                <!--Sign Up form-->
+                <form action="" class="sufrm">
+                    <div class="ui">
+                        <input type="text" placeholder="Enter your username">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="ui">
+                        <input type="email" placeholder="Enter your email">
+                        <i class="fa fa-email"></i>
+                    </div>
+                    <div class="ui">
+                        <input type="password" placeholder="Enter your password">
+                        <i class="fa fa-lock"></i>
+                    </div>
+                    <a href="#" class="fbtns">Sign Up</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
