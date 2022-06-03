@@ -219,3 +219,32 @@ body {
     text-decoration: none;
     color: #979797;
 }
+.card .frms .sufrm {
+    bottom: 350px;
+    left: -100%;
+}
+
+/* Toggle Forms */
+#tog_2:checked ~ .frms > .sifrm{
+    right: -100%;
+}
+#tog_2:checked ~ .frms > .sufrm{
+    left: 0;
+}
+#tog_1:checked ~ .frms > .sifrm{
+    right: 0;
+}
+
+/*Responsiveness*/
+@media(max-width: 460px){
+    .card {
+        width: 95%;
+    }
+
+    .card .frms form i{
+        left: 20px;
+    }
+    .card .frms .sifrm .remember{
+        left: 10px;
+    }
+}
